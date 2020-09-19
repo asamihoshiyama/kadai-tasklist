@@ -6,7 +6,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class DBUtil {
-    private static final String PERSINTENCE_UNIT_NAME = "tasuklist";
+    private static final String PERSISTENCE_UNIT_NAME = "tasklist";
     private static EntityManagerFactory emf;
 
     public static EntityManager createEntityManager() {
@@ -15,7 +15,7 @@ public class DBUtil {
 
     private static EntityManagerFactory _getEntityManagerFactory() {
         if(emf == null) {
-            emf = Persistence.createEntityManagerFactory(PERSINTENCE_UNIT_NAME);
+            emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
         }
 
         return emf;
